@@ -5,12 +5,11 @@ void setup() {
 
 //🎯Variable Declarations Go Here
 var sunSize = 30; 
-
+var x = 10;
 
 //🟢Draw Function - Runs on Repeat
-draw = function(){
-  noStroke(); 
-  
+noStroke(); 
+draw = function(){  
   // the beautiful blue sky
   background(82, 222, 240);
     
@@ -24,9 +23,14 @@ draw = function(){
   
   //ladybug
   fill(200,0,0);
-  ellipse(10, 350, 10, 10);
-}
+  ellipse(x + 10, 350, 10, 10);
+x = x + 1
 
+  sunSize=sunSize+3;
+  if(sunSize>400){
+    sunSize=30;
+  }
+}
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
